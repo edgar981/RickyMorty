@@ -10,14 +10,9 @@ function Nav (props){
                     <SearchBar
                         onSearch={props.onSearch}
                     />
-                   <ul>
-                       <li>
-                           <NavLink to='/about' >About</NavLink>
-                       </li>
-                       <li>
-                           <NavLink to='/home'>Home</NavLink>
-                       </li>
-                   </ul>
+                    <div><NavLink to='/about' >About</NavLink></div>
+                    <div><NavLink to='/home'>Home</NavLink></div>
+                    <div><NavLink to='/'>Inicio</NavLink></div>
                 </div>
             </div>
         );

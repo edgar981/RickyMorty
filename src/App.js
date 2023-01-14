@@ -7,6 +7,7 @@ import {useState} from "react";
 import Nav from "./components/Nav";
 import {Routes, Route} from "react-router-dom";
 import Detail from "./components/Detail.jsx";
+import Inicio from "./components/Inicio";
 
 function App () {
   const [characters, setCharacters] = useState([]);
@@ -38,18 +39,14 @@ function App () {
     <div className='App' style={{ padding: '25px' }}>
         <div>
           <Nav onSearch={onSearch}/>
-            <Routes>
-                <Route path="/home" element={<Cards/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/detail/:detailId" element={<Detail/>} />
-            </Routes>
         </div>
         <hr />
-      <div>
-        <Cards
-          characters={characters} onClose={onClose}
-        />
-      </div>
+        <Routes>
+            <Route path="/" element={<Inicio/>}/>
+            <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/detail/:detailId" element={<Detail/>} />
+        </Routes>
     </div>
   )
 }
