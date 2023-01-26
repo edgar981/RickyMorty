@@ -1,0 +1,202 @@
+
+.nav{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.logo{
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(0, 255, 111);
+}
+.nav .nav-items{
+    display: flex;
+}
+.nav .nav-items a{
+    border-radius: 50px;
+    color: aliceblue;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 5px;
+    position: relative;
+    opacity: 0.9;
+    padding: 10px 10px;
+}
+
+.nav > .nav-items > a:hover{
+    color: rgb(47, 255, 0);
+    background: rgba(0, 138, 255, 0.67);
+}
+
+.nav .nav-items a.active{
+    color: rgb(47, 255, 0);
+    background: rgba(0, 138, 255, 0.67);
+    font-weight: 600;
+}
+
+/*.nav > .nav-items > a::before{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    width: 0;*/
+/*    height: 2px;*/
+/*    transition: all .45s;*/
+/*    background-color: rgb(47, 255, 0);*/
+/*}*/
+
+.nav > .nav-items > a:hover::before{
+    width: 100%;
+}
+
+.nav > .nav-toggle{
+    display: none;
+}
+
+@media screen and (max-width: 950px){
+    .nav {
+        padding: 0;
+    }
+    .nav > .nav-items{
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        background: aliceblue;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all .45s;
+        justify-content: center;
+        background-color: rgba(255, 130, 0, 0);
+        backdrop-filter: blur(2px);
+        margin: 35px;
+
+    }
+
+    .nav > .nav-items > a:hover{
+        color: rgb(47, 255, 0);
+        background: rgba(0, 138, 255, 0.67);
+        font-weight: 900;
+    }
+
+    .nav > .nav-items > a::before {
+        background: transparent;
+    }
+
+    .nav .nav-items.open {
+        transform: translateX(0);
+    }
+
+    .nav > .nav-toggle{
+        right: 2px;
+        display: flex;
+        width: 30px;
+        height: 50px;
+        top: 60px;
+        cursor: pointer;
+        position: absolute;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .nav-toggle .bar{
+        position: absolute;
+        width: 32px;
+        height: 2px;
+        background: aliceblue;
+    }
+
+    .nav-toggle > .bar::before , .nav-toggle > .bar::after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: aliceblue;
+        border-radius: 2px;
+        transition: all.45s ease-in-out;
+    }
+
+    .nav-toggle > .bar::before {
+        width: 17px;
+        transform: translateY(-8px);
+
+    }
+
+    .nav-toggle > .bar::after {
+        width: 31px;
+        transform: translateY(8px);
+        right: 3%;
+    }
+
+    .nav-toggle.open > .bar {
+        transform: translateX(-40px);
+        background: transparent;
+    }
+
+    .nav-toggle.open > .bar::before {
+        width: 16px;
+        transform: rotate(45deg) translate(25px, -25px);
+    }
+
+    .nav-toggle.open > .bar::after {
+        width: 16px;
+        transform: rotate(-45deg) translate(25px, 25px);
+    }
+}
+
+/*@media screen and (max-width: 1000px){*/
+/*    .logo{*/
+/*        position: absolute;*/
+/*        top: 50px;*/
+/*        left: 50px;*/
+/*    }*/
+/*    .nav{*/
+/*        padding: 0;*/
+/*    }*/
+/*    .hamburger-menu{*/
+/*        display: block;*/
+/*    }*/
+/*    .links{*/
+/*        top: 0;*/
+/*        left: 0;*/
+/*        position: absolute;*/
+/*        width: 100%;*/
+/*        height: 100vh;*/
+/*        display: flex;*/
+/*        justify-content: center;*/
+/*        align-items: center;*/
+/*        margin-left: 0;*/
+/*        transform: translateX(-100%);*/
+/*        transition: transform 0.4s ease-in;*/
+/*        background-color: rgba(0, 0, 128, 0.24);*/
+/*        backdrop-filter: blur(2px);*/
+/*    }*/
+
+/*    .listas{*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*        margin-left: 200%;*/
+/*        transition: 0.4s ease;*/
+/*    }*/
+/*    .listas li{*/
+/*        margin: 25px 0;*/
+/*        font-size: 1.2em;*/
+/*    }*/
+/*    .listas li a:hover{*/
+/*        color: rgb(47, 255, 0);*/
+/*        background: rgba(0, 138, 255, 0);*/
+/*        font-weight: 900;*/
+/*    }*/
+/*    .listas li a.active{*/
+/*        color: rgb(47, 255, 0);*/
+/*        background: rgba(0, 138, 255, 0);*/
+/*    }*/
+
+/*}*/
