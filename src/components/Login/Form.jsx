@@ -29,31 +29,40 @@ export default function Form(props){
 
     return(
       <div className='login'>
-          <h1 className='huno'>Login</h1>
-          <form onSubmit={(e => handleSubmit(e))} className='form-login'>
-              {/*<label></label>*/}
-              <input
-                  name='username'
-                  type='text'
-                  className='username'
-                  value={userData.username}
-                  onChange={handleChange}
-                  placeholder='Username'
-              />
-              <p>{errors.username}</p>
 
-              {/*<label>: </label>*/}
-              <input
-                  name='password'
-                  type='password'
-                  className='password'
-                  value={userData.password}
-                  onChange={handleChange}
-                  placeholder='Password'
-              />
-              <p>{errors.password}</p>
-              <button type='submit' className='btn'>LOGIN</button>
+          <form onSubmit={(e => handleSubmit(e))} className='form-login'>
+              <h2 className='huno'>Sign in</h2>
+
+              <div>
+                  <span className='icon'><ion-icon name="mail-outline"></ion-icon></span>
+                  {/*<ion-icon name="mail"></ion-icon>*/}
+                  <input
+                      name='username'
+                      type='text'
+                      className='username'
+                      value={userData.username}
+                      onChange={handleChange}
+                      // placeholder='Username'
+                  /><label>Username</label>
+                  <p>{errors.username}</p>
+              </div>
+              <div>
+                  <span className='icon'><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  {/*<ion-icon name="lock-closed"></ion-icon>*/}
+                  <input
+                      name='password'
+                      type='password'
+                      className='password'
+                      value={userData.password}
+                      onChange={handleChange}
+                      // placeholder='Password'
+                  /><label>Password</label>
+                  <p>{errors.password}</p>
+              </div>
+              <button type='submit' className='btn'>Login</button>
           </form>
+
+
       </div>
     );
 }

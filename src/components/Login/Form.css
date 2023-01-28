@@ -1,51 +1,10 @@
 .login{
     position: relative;
     padding: 50px 15px;
-    width: 270px;
+    width: 280px;
     height: 450px;
     box-shadow: 0px 0px 50px 0px greenyellow;
     border-radius: 20px;
     overflow: hidden;
     backdrop-filter: blur(1px);
-}
-
-.form-login{
-    position: absolute;
-    height: 98%;
-    width: 98%;
-    top: 60%;
-    left: 27%;
-    transform: translate(-22%, -20%);
-    background: transparent;
-}
-
-.huno{
-    font-size: 30px;
-    color: greenyellow;
-    text-align: center;
-}
-
-.form-login input{
-    display: block;
-    padding: 12px 15px;
-    width: 90%;
-    left: 50%;
-    border-radius: 5px;
-    margin-top: 20px;
-    border: 0.5px solid #00ff9c;
-    outline: none;
-    background: transparent;
-    color: greenyellow;
-}
-
-.btn{
-    cursor: pointer;
-    color: #ffffff;
-    margin-top: 25px;
-    margin-right: 2%;
-    width: 50%;
-    padding: 8px;
-    outline: none;
-    background: transparent;
-    border: none;
 }

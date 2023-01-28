@@ -3,7 +3,7 @@ import './App.css'
 import Cards from './components/Cards/Cards.jsx'
 import About from './components/About/About.jsx'
 // import SearchBar from './components/SearchBar.jsx'
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Nav from "./components/NavBar/Nav";
 import {Routes, Route, useLocation, useNavigate} from "react-router-dom";
 import Detail from "./components/Detail/Detail.jsx";
@@ -77,6 +77,7 @@ function App () {
             <Route path="/detail/:detailId" element={<Detail/>} />
             <Route path="/favorites" element={<Favorites characters={characters} onClose={onClose}/>} />
         </Routes>
+
     </div>
   )
 }
